@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_pref/forms/globals.dart';
+import 'package:shared_pref/forms/helpers/file_helper.dart';
 import 'package:shared_pref/forms/helpers/shared_pref.dart';
 import 'package:shared_pref/forms/ui/register/main_register_screen.dart';
 
@@ -24,6 +25,8 @@ class HomePage extends StatelessWidget {
             child: Text('SignOut'),
             onPressed: () {
               SpHelper.spHelper.signOut();
+              // FileHelper.fileHelper.writeInFile('gsg');
+              // FileHelper.fileHelper.readFromFile('gsg');
             },
           ),
         ],
