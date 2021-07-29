@@ -1,3 +1,4 @@
+import 'package:share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class UrlLauncherHelper {
@@ -53,5 +54,12 @@ class UrlLauncherHelper {
     } catch (e) {
       print(e);
     }
+  }
+
+  shareConent(){
+    Share.share('hello how are you');
+  }
+  shareImages(){
+    Share.share('hello how are you');
   }
 }

@@ -2,9 +2,11 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get_it/get_it.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:shared_pref/assignment/data/data_source.dart';
 import 'package:shared_pref/forms/data_repositories.dart';
+import 'package:shared_pref/forms/helpers/db_helper.dart';
 import 'package:shared_pref/forms/models/sphelper.dart';
 import 'package:shared_pref/forms/router/router.dart';
 import 'package:shared_pref/forms/ui/home/ui/home_page.dart';
@@ -13,6 +15,7 @@ import 'package:shared_pref/forms/ui/register/splash_screen.dart';
 
 void main() {
   SpHelper.spHelper.initSharedPreferences();
+  GetIt.I.registerSingleton<DbHelper>(DbHelper());
   runApp(
     MyApp(),
   );
